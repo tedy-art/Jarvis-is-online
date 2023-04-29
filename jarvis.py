@@ -10,7 +10,7 @@ import os
 import smtplib
 import wikipedia as wikipedia
 
-engine = pyttsx3.init('sapis')
+engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 # print(voices[1].id)
 engine.setProperty('voice', voices[0].id)
@@ -88,7 +88,7 @@ if __name__ == "__main__":
             strTime = datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"sir, the time is {strTime}")
         elif 'open code' in query:
-            codepath = "C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\code.exe"
+            codepath = r"C:\Users\HP\AppData\Local\Programs\Microsoft VS Code\Code.exe"
             os.startfile(codepath)
 
         elif 'emial to Tejas' in query:
